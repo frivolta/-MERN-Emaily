@@ -23,7 +23,7 @@ getPaths();
 */
 
 app.get('/', (req, res) => {
-  res.send({ hi: 'there' })
+  res.send({ hi: 'Buddy' })
 })
 // Env variables are injected by Heroku
 const PORT = process.env.PORT || 5000;
