@@ -15,6 +15,15 @@ module.exports = app => {
     res.send('Thanks for voting');
   })
 
+  // Get surveys
+  app.get('/api/surveys', requireLogin, async (req, res) => {
+    const surveys = await Survey.find({ _user: req.user.id })
+      .select({
+        recipients: false
+      })
+    res.send(surveys)
+  })
+
   // Send out emails
   app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
     const { title, subject, body, recipients } = req.body;
