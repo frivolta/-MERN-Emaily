@@ -1,0 +1,11 @@
+- JWT Authentication
+- React Hooks
+- Logout session
+- Material Design
+- PropTypes
+- Typescript
+- Testing
+- Change question type
+- Refactor components
+- Private Routes Client side
+- Static testing
